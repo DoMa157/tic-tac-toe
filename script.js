@@ -107,9 +107,13 @@ const Game = (function () {
 
 
 const DisplayManager = (function (Game){
+    const parentGridHTML = document.querySelector("body>div").innerHTML;
     const generateCells = function (){
-        const grid = document.querySelector(".grid");
+        const parentGrid = document.querySelector("body>div");
+        const grid = document.createElement("div");
+        grid.className = "grid";
         const score = document.querySelector(".score");
+        parentGrid.innerHTML = parentGridHTML;
         grid.innerHTML = "";
         for(let i = 0; i < 5; i++){
             for(let j = 0; j < 5; j++){
@@ -134,6 +138,7 @@ const DisplayManager = (function (Game){
                 }
             }
         }
+        parentGrid.appendChild(grid);
         score.textContent = "";
     };
 
@@ -156,8 +161,11 @@ const DisplayManager = (function (Game){
         const secondFormName = document.querySelector('input[name = "player-two"').value;
         return secondFormName;
     }
-    return {generateCells, showWinner, getFirstName, getSecondName, showTie};
+
+    const initialText = function(){
+        const press = document.querySelector(".score");
+        press.textContent = "Type in names and press start button to start";
+    }
+    return {generateCells, showWinner, getFirstName, getSecondName, showTie, initialText};
 })(Game);
 
-
-DisplayManager.generateCells();
