@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: #E8DFCA;
+    gap: 16px;
+}
+
+.grid{
+    display: grid;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: 10fr 1fr 10fr 1fr 10fr;
+    grid-template-rows: 10fr 1fr 10fr 1fr 10fr;
+    border-radius: 8px;
+    background-color: #1A4D2E;
+    border: 5px solid #322C2B;
+}
+
+form{
+    background-color: #1A4D2E;
+    border: 5px solid #322C2B;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.score{
+    align-self: center;
+}
+
+input{
+    border-radius: 6px;
+    background-color: #E8DFCA;
+    padding: 8px 16px;
+    border: 3px solid #322C2B;
+}
+
+button{
+    background-color: #322C2B;
+    color:#E8DFCA;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+body > div{
+    display: flex;
+    flex-direction: column;
+}
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.cell:hover{
+    background-color: #803D3B;
+}
+.border{
+    border-radius: 16px;
+    background-color: #E8DFCA;
+}
+
+header{
+    font-size: 32px;
+    color: #322C2B;
+    font-weight: bold;
+    justify-self: flex-start;
+    align-self: center;
+}
