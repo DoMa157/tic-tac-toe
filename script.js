@@ -169,3 +169,4 @@ const DisplayManager = (function (Game){
     return {generateCells, showWinner, getFirstName, getSecondName, showTie, initialText};
 })(Game);
 
+DisplayManager.initialText();
